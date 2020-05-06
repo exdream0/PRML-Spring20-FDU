@@ -10,8 +10,8 @@ if __name__ == '__main__':
     arg = parser.parse_args()
 
     if arg.framework == 'pt':
-        pt_main(500, 100)
-        pt_adv_main(500, 5, 100, 3, "LSTM", 0.01)
+        pt_main()
+        pt_adv_main(3000, 10, 10, 3, "RNN", 0.01, 100)
     elif arg.framework == 'tf':
         tf_main()
         tf_adv_main()
